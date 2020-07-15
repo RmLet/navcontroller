@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="OtherContoller" customModule="NavigationController" customModuleProvider="target">
+            <connections>
+                <outlet property="stack_count" destination="IZj-Dq-OtB" id="Myd-2B-w7x"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="ezE-n8-1Dc">
+                    <rect key="frame" x="69" y="20" width="163" height="96"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cA6-E2-XEF">
+                            <rect key="frame" x="19" y="31" width="45" height="32"/>
+                            <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoBackTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aAR-7o-y9I">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="remove:" target="-2" id="nJN-Hb-Nps"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y4Y-R8-9Rb">
+                            <rect key="frame" x="99" y="31" width="45" height="32"/>
+                            <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoRightTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iR7-qN-L5D">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                                <connections>
+                                    <action selector="add:" target="-2" id="qRZ-gG-rl1"/>
+                                </connections>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="y4Y-R8-9Rb" secondAttribute="trailing" constant="25" id="7C5-wP-m7e"/>
+                        <constraint firstItem="cA6-E2-XEF" firstAttribute="centerY" secondItem="ezE-n8-1Dc" secondAttribute="centerY" id="P2i-Zh-C2g"/>
+                        <constraint firstItem="cA6-E2-XEF" firstAttribute="leading" secondItem="ezE-n8-1Dc" secondAttribute="leading" constant="25" id="pB1-1Z-Og2"/>
+                        <constraint firstItem="cA6-E2-XEF" firstAttribute="top" secondItem="y4Y-R8-9Rb" secondAttribute="top" id="tQD-ji-S4l"/>
+                    </constraints>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xws-Go-SLG">
+                    <rect key="frame" x="117" y="236" width="68" height="32"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="IZj-Dq-OtB">
+                        <font key="font" metaFont="system" size="27"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ezE-n8-1Dc" secondAttribute="trailing" constant="68" id="FW5-lu-Ju1"/>
+                <constraint firstItem="Xws-Go-SLG" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="32" id="KMR-70-Q4i"/>
+                <constraint firstItem="ezE-n8-1Dc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="69" id="Mf1-E3-49W"/>
+                <constraint firstItem="ezE-n8-1Dc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="184" id="U0e-qF-ADi"/>
+                <constraint firstItem="Xws-Go-SLG" firstAttribute="centerX" secondItem="ezE-n8-1Dc" secondAttribute="centerX" id="aeC-dN-dAZ"/>
+                <constraint firstAttribute="bottom" secondItem="ezE-n8-1Dc" secondAttribute="bottom" constant="20" id="lf4-5D-NTu"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSGoBackTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+    </resources>
+</document>
